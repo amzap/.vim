@@ -1,5 +1,7 @@
 "" Adrian Moreno's vimscript. Ideally this file will be inside my git
 "" repository and symlinked to ~/.vimrc
+"" NOTE: This configuration depends on vundle. If it's a new system, run:
+"" git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 "" Vundle specifics {{
 filetype off                  " required!
