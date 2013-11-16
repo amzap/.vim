@@ -15,10 +15,49 @@ call vundle#rc()
 Bundle 'gmarik/vundle' 
 
 "}} Vundle specifics
+
+
+"" General {{
+
 filetype plugin indent on    " Also required for Vundle
+
+" Read files when modified externally
+set autoread
+
+
+set tags=./tags; "Recursively look for tags
+set tags+=$HOME/.vim/tags "Commonly used tags: stl, libc...
+
+set autochdir "Still deciding if I like this...
+
+"" }} General
 
 "" Visual settings{{
 :syn on
+
+" Show lines
+set number
+set ruler
+
+" Ignore case when searching
+set ignorecase
+
+" When searching try to be smart about cases
+set smartcase
+
+" Highlight search results
+set hlsearch
+map <F3> :set invhlsearch<CR>
+
+" Colorscheme - this one looks ok
+try
+    colorscheme desert
+catch
+endtry
+
+set background=dark
+
+
 "Tabulation and indentation
 set softtabstop=4
 set autoindent 
@@ -31,29 +70,34 @@ set notextmode
 set hlsearch
 
 "Pmenu colors: the default ones are horrible!
-highlight Pmenu ctermbg=blue ctermfg=white
-hi PmenuSel ctermbg=yellow ctermfg=black
+"highlight Pmenu ctermbg=blue ctermfg=white
+"hi PmenuSel ctermbg=yellow ctermfg=black
 
 set redraw 
 "" }} Visual settings
 
-"" Mappings {{
-map <F3> :set invhlsearch<CR>
+
+"" Moving around, tabs, windows and so on {{
 "" TODO: F4 still unassigned!
+
 "Scroll the tabs
 map <F5> :tabp<CR>
 map <F6> :tabn<CR>
 
-""}} Mappings
-
-set tags=./tags; "Recursively look for tags
-set tags+=$HOME/.vim/tags "Commonly used tags: stl, libc...
-set autochdir "Still deciding if I like this...
+" Smart way to move between windows
+ map <C-j> <C-W>j
+ map <C-k> <C-W>k
+ map <C-h> <C-W>h
+ map <C-l> <C-W>l
 
 "Mouse support
 set mouse=a
 map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
+
+""}} Moving around
+
+
 
 "" Vundle bundles {{
 
