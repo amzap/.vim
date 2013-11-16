@@ -24,7 +24,8 @@ filetype plugin indent on    " Also required for Vundle
 " Read files when modified externally
 set autoread
 
-
+" Leader map
+let mapleader = ","
 set tags=./tags; "Recursively look for tags
 set tags+=$HOME/.vim/tags "Commonly used tags: stl, libc...
 
@@ -54,7 +55,6 @@ try
     colorscheme desert
 catch
 endtry
-
 set background=dark
 
 
@@ -70,8 +70,9 @@ set notextmode
 set hlsearch
 
 "Pmenu colors: the default ones are horrible!
-"highlight Pmenu ctermbg=blue ctermfg=white
-"hi PmenuSel ctermbg=yellow ctermfg=black
+""highlight Pmenu ctermbg=blue ctermfg=white
+""hi PmenuSel ctermbg=yellow ctermfg=black
+
 
 set redraw 
 "" }} Visual settings
@@ -110,11 +111,7 @@ Bundle 'Gundo'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 
-" Python-mode { still not sure...
-"Load the whole plugin
-let g:pymode = 0
-Bundle 'klen/python-mode'
-" } Python-mode
+Bundle 'davidhalter/jedi-vim'
 
 "" }} Vundle bundles
 
