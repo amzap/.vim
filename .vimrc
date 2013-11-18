@@ -27,6 +27,7 @@ set expandtab
 set smarttab 
 set smartindent
 
+set number
 set notextmode 
 set hlsearch
 
